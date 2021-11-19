@@ -55,7 +55,6 @@ This is the directory structure that miniCal follows for an extension, under the
 			
 ```
 **Controllers**<br/>
-
 We’ll start by creating a controller inside minical-extension-boilerplate->controllers. In this example, there is a variable $module_name basically its module name or folder name in this case it's minical-extension-boilerplate. _Construct(), initialize all the dependencies such as models, libraries, helpers. now moving forward in any controller's method load the JS or CSS file related to that particular section. Here is the detail about how you can add custom data into the database [Managing Customdata].
 
 **Assets**<br/>
@@ -102,7 +101,7 @@ you can add multiple helper files into this array, they will be loaded automatic
 
 **Hooks**<br/>
 Under the hooks folder, we have 2 files actions.php and filters.php<br/>
-**1. Actions**
+**1. Actions:-** 
 Action are one of the two types of hooks. They provide a way for running a function at a specific point in the execution of miniCal Core. Callback functions for an Action do not return anything to the calling Action hook. You can create a hook in the application/hooks folder,
 here we have created an actions.php file.
 <br>You can find the list of actions here [miniCal Action list](https://github.com/minical/minical/wiki/The-list-of-the-miniCal-actions) 
@@ -122,7 +121,7 @@ function your_custom_callback_function($data) {
     // code here
 }
 ```
-**2. Filters**
+**2. Filters:-**
 They provide a way for functions to modify data during the execution of the miniCal Core. They are the counterpart to action.
 You can create a hook in the application/hooks folder,
 here we have created an filers.php file.
