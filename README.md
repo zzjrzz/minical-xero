@@ -85,7 +85,7 @@ $lang array key will have the like [extension_folder_name][keyword] and for valu
 
 
 ###### Models
-this folder contains model files, all the database-related queries will go on these files.
+This folder contains model files, all the database-related queries will go on these files.
 
 ###### View
 A view is simply a web page, or a page fragment, like a header, footer, sidebar, etc. In fact, views can flexibly be embedded within other views (within other views, etc., etc.) if you need this type of hierarchy.
