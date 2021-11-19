@@ -31,10 +31,7 @@ It is a sample boilerplate extension it contains the basic structure of a typica
 **Extension Directory Structure**<br/>
 This is the directory structure that miniCal follows for an extension, under the extensions folder create a minical-extension-boilerplate folder. 
 ```
-|->public
-     |->application
-	    |->extensions
-		  |->minical-extension-boilerplate
+ |->minical-extension-boilerplate
 			 |->assets
                               |->js
                               |->css
