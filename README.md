@@ -7,6 +7,7 @@
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Features](#features)
+* [Tutorial](#tutorial)
 * [Dependencies](#dependencies)
 * [Versioning](#versioning)
 * [License](#license)
@@ -25,6 +26,119 @@ It is a sample boilerplate extension it contains the basic structure of a typica
 
 ### Features
 * Show the list of bookings.
+
+### Tutorial
+###### Extension Directory Structure
+This is the directory structure that miniCal follows for an extension, under the extensions folder create a minical-extension-boilerplate folder. 
+```
+|->public
+     |->application
+	    |->extensions
+		  |->minical-extension-boilerplate
+			 |->assets
+                              |->js
+                              |->css
+			 |->config
+                              |->autoload.php
+                              |->config.php
+                              |->menu.php
+                              |->route.php
+			 |->controllers
+                         |->helpers
+                         |->hooks
+                              |->actions.php
+                              |->filters.php
+                         |->language
+                         |->libraries
+			 |->models
+			 |->views
+```	
+
+###### Controllers
+
+We’ll start by creating a controller inside minical-extension-boilerplate->controllers. In this example, there is a variable $module_name basically its module name or folder name in this case it's minical-extension-boilerplate. _Construct(), initialize all the dependencies such as models, libraries, helpers. now moving forward in any controller's method load the JS or CSS file related to that particular section. Here is the detail about how you can add custom data into the database [Managing Customdata].
+
+###### Assets
+This folder has two subfolders CSS and js, As clear by its name all the js files (.js extension) or third-party files will reside here. And all CSS files custom or third-party will reside here.
+
+###### Config
+This folder has four files each file has its own different work.
+1. **autoload.php:** This file load all the asset dependency in the controller. Make a config array and add all files to it, config array has a "file" key that has JS file location as value and a "location" key that has an array of locations("controller_name/method_name") as value(where this JS file going to load).
+2. **config.php:** This file has the config array containing the extension details such as name, description, or any information about it. 'is_default_active' key has 1 or 0.
+3. **menu.php:** This file has menu-related details such as the extension's menu label, position on the menu bar, and route link. In this array, the 'location' key has a value such as PRIMARY, SECONDARY, and THIRD. 'label' key has menu label, 'link' key has URL link.
+4. **route.php:** This has an array of extension routes, the route will be defined as the same ci route.
+
+###### language
+Language folder contains subfolders of languages, each language subfolder will contain an index.php file, this file will have an array of words.
+```
+language
+      |->english
+             |->index.php
+      |->korean
+             |->index.php
+      |->portuguese 
+             |->index.php
+
+```
+$lang array key will have the like [extension_folder_name][keyword] and for value translation of the keyword. 
+
+
+
+###### Models
+this folder contains model files, all the database-related queries will go on these files.
+
+###### View
+A view is simply a web page, or a page fragment, like a header, footer, sidebar, etc. In fact, views can flexibly be embedded within other views (within other views, etc., etc.) if you need this type of hierarchy.
+Views are never called directly, they must be loaded by a controller. 
+
+
+###### Library
+The library is a class with functions or methods that allows creating an instance of that class.
+For your extensions you can add library under libraries folder, the naming convention should be like GreetingEmail.php.
+
+###### Helper
+Each helper file is simply a collection of functions in a particular category. For example, we have a booking_list_helper.php file. 
+<br/>For loading helper file go to the autoload.php under config folder of your extension add helper file in the array, use $extension_helper variable.
+you can add multiple helper files into this array, they will be loaded automatically by my_controller. 
+
+
+###### Hooks
+Under the hooks folder, we have 2 files actions.php and filters.php
+1. Actions
+Action are one of the two types of hooks. They provide a way for running a function at a specific point in the execution of miniCal Core. Callback functions for an Action do not return anything to the calling Action hook. You can create a hook in the application/hooks folder,
+here we have created an actions.php file.
+<br>You can find the list of actions here [miniCal Action list](https://github.com/minical/minical/wiki/The-list-of-the-miniCal-actions) 
+```
+<?php
+//file name actions.php
+// This is a core action that will be executed when a new reservation is created in miniCal
+add_action('add.booking.created', 'your_callback_function_1', 10, 1);
+function your_callback_function_1($data) {
+    // code here
+}
+
+
+// This is a custom action and can be executed from this extension controllers.
+add_action('my-custom-action', 'your_custom_callback_function', 10, 1);
+function your_custom_callback_function($data) {
+    // code here
+}
+```
+2. Filters
+They provide a way for functions to modify data during the execution of the miniCal Core. They are the counterpart to action.
+You can create a hook in the application/hooks folder,
+here we have created an filers.php file.
+
+```
+<?php
+// This is a custom action and can be executed from this extension controllers.
+add_filter('my-custom-filter', 'your_callback_function_2', 10, 1);
+function your_callback_function_2($data) {
+    
+    // start writing code here
+    // return $data;
+}
+```
 
 ### Dependencies
 
