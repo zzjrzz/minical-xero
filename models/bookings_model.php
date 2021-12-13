@@ -17,7 +17,7 @@ class Bookings_model extends CI_Model {
                 where b.booking_id=bb.booking_id 
                 and bb.room_id=r.room_id
                 and b.booking_customer_id=c.customer_id
-                and b.company_id=$company_id";
+                and b.company_id=$company_id order by b.booking_id DESC LIMIT 20" ;
         
         $booking_data = $this->db->query($sql_query);    
             if ($this->db->_error_message()) 
@@ -27,6 +27,20 @@ class Bookings_model extends CI_Model {
             
 
         $result = $booking_data->result_array();       
+        return $result;
+    }
+
+    function get_customer_list()
+    {
+        $company_id = $this->session->userdata('current_company_id');
+        $query = "SELECT customer_name, email, address,phone FROM customer where company_id = $company_id order by customer_id DESC LIMIT 20";
+        $customer = $this->db->query($query);    
+        if ($this->db->_error_message()) 
+        {
+            show_error($this->db->_error_message());
+        }
+        
+        $result = $customer->result_array();       
         return $result;
     }
 

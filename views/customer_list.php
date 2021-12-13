@@ -36,53 +36,59 @@
 <div class="main-card card">
     <div class="card-body">
         <!-- Required for opening booking dialog while viewing [Show all...] pages -->
+        <div id="booking_dialog"></div>
+        <h5>This is a sample page showing the list of last 20 customers, it's just for you to understand how an
+            extension
+            works. You can either modify it or
+            delete it.</h5>
         <div class="">
-            <h5>This is a sample page showing the list of last 20 bookings, it's just for you to understand how an
-                extension works. You can either modify it or
-                delete it.</h5>
             <table id="example" class="display" style="width:100%">
                 <thead>
                     <tr>
-                        <th class=" text-center"><?php echo l('minical-extension-boilerplate/booking_id', true);?></th>
-
-                        <th class="text-center"><?php echo l('minical-extension-boilerplate/room_number', true);?></th>
-
-                        <th class="text-center"><?php echo l('minical-extension-boilerplate/check_in_date', true);?>
+                        <th class="text-center"><?php echo l('minical-extension-boilerplate/S. No.', true);?></th>
+                        <th class="text-center"><?php echo l('minical-extension-boilerplate/customer name', true);?>
                         </th>
 
-                        <th class="text-center"><?php echo l('minical-extension-boilerplate/check_out_date', true);?>
-                        </th>
+                        <th class="text-center"><?php echo l('minical-extension-boilerplate/email', true);?></th>
 
-                        <th class="text-center"><?php echo l('minical-extension-boilerplate/customer_name', true);?>
-                        </th>
+                        <th class="text-center"><?php echo l('minical-extension-boilerplate/phone', true);?></th>
+
+                        <th class="text-center"><?php echo l('minical-extension-boilerplate/address', true);?></th>
 
                     </tr>
                 </thead>
                 <tbody>
                     <?php 
-                        if (isset($bookings) && $bookings):
-                        foreach ($bookings as $booking) : 
-                        if (isset($booking['booking_id'])):
+                    if (isset($customers) && $customers):
+                        $i = 1;
+                    foreach ($customers as $customer) : 
+                        
+                    if (isset($customer['customer_name']) && $customer):
                     ?>
                     <tr class='booking'>
-                        <td class="text-center"><?php echo $booking['booking_id']; ?></td>
                         <td class="text-center">
-                            <?php echo $booking['room_name'] ? $booking['room_name'] : 'Not Assigned'; ?>
+                            <?php echo $i;?></td>
+                        <td class="text-center">
+                            <?php echo $customer['customer_name']; ?></td>
+                        <td class="text-center">
+                            <?php echo $customer['email'] ? $customer['email'] : ''; ?>
                         </td>
-                        <td class="text-center"><?php echo $booking['check_in_date']; ?></td>
-                        <td class="text-center"><?php echo $booking['check_out_date']; ?></td>
-                        <td class="text-center"><?php echo $booking['customer_name']; ?></td>
+                        <td class="text-center">
+                            <?php echo $customer['phone'] ? $customer['phone'] : ''; ?>
+                        </td>
+                        <td class="text-center">
+                            <?php echo $customer['address'] ? $customer['address'] : ''; ?>
+                        </td>
                     </tr>
-                    <?php 
-                    endif;
+                    <?php  endif;
+                    $i++;
                     endforeach;
-                    else:
-                     ?>
+                    else: ?>
                     <tr class='booking' data-booking-id=''>
                         <td></td>
                         <td></td>
                         <td class="text-center">
-                            <h3><?php echo l('minical-extension-boilerplate/no_bookings_found', true);?></h3>
+                            <h3><?php echo l('minical-extension-boilerplate/No Data', true);?></h3>
                         </td>
                         <td></td>
                         <td></td>
