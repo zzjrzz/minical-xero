@@ -1,6 +1,7 @@
 $(document).ready(function () {
-
+    $('#option_list').DataTable();
     $('#add_option_model_button').on('click', function () {
+        $('#add_option_model form')[0].reset();
         $('#update_option').css("display", "none");
         $('#add_option_model').modal('show');
     });

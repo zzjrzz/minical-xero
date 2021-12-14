@@ -40,7 +40,8 @@
             <h5>This is a sample page showing the list of last 20 bookings, it's just for you to understand how an
                 extension works. You can either modify it or
                 delete it.</h5>
-            <table id="example" class="display" style="width:100%">
+            <hr>
+            <table id="booling_list" class="display" style="width:100%">
                 <thead>
                     <tr>
                         <th class=" text-center"><?php echo l('minical-extension-boilerplate/booking_id', true);?></th>

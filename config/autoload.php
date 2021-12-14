@@ -2,12 +2,19 @@
 //load js file on controller function
 $config['js-files'] = array(
     array(
-        "file" => 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
+        "file" => 'https://nightly.datatables.net/js/jquery.dataTables.js',
         "location" => array(
             "show_booking/show_latest_bookings",
             "show_booking/show_customer_list",      
             "custom_data/get_post_data",
             "option_data/get_option_data",
+        ),
+    ), 
+    array(
+        "file" => 'assets/js/booking_list.js',
+        "location" => array(
+            "show_booking/show_latest_bookings",
+            "show_booking/show_customer_list", 
         ),
     ),
     array(
@@ -39,7 +46,7 @@ $config['css-files'] = array(
         ),
     ),
     array(
-        "file" => 'https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css',
+        "file" => 'https://nightly.datatables.net/css/jquery.dataTables.css',
         "location" => array(
             "show_booking/show_latest_bookings",
             "show_booking/show_customer_list",

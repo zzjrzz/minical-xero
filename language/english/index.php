@@ -47,6 +47,10 @@ $lang['minical-extension-boilerplate']['Update Post'] = 'Update Post';
 $lang['minical-extension-boilerplate']['Add Post'] = 'Add Post';
 $lang['minical-extension-boilerplate']['Update option'] = 'Update option';
 $lang['minical-extension-boilerplate']['Info Page'] = 'Info Page';
+$lang['minical-extension-boilerplate']['custom Field 1'] = 'Custom field One';
+$lang['minical-extension-boilerplate']['custom Field 2'] = 'Custom field Two';
+$lang['minical-extension-boilerplate']['custom Field 3'] = 'Custom field Three';
+
 
 
 ?>

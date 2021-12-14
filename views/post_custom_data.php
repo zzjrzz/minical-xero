@@ -37,9 +37,9 @@
     <div class="card-body">
         <h5>This is a sample page of CRUD(Create, read, update and delete) for custom data (post-table). It's just how
             you can handle the custom data in miniCal. You can either modify it or delete it.</h5><br />
-
-        <div><button class="pull-right btn btn-primary" id="add_post_model_button">Add Post</button></div><br />
-        <table id="example" class="display" style="width:100%">
+        <hr>
+        <div><button class="pull-right btn btn-primary" id="add_post_model_button">Add Post</button></div><br /><br>
+        <table id="post_list" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th class=" text-center">Post ID</th>

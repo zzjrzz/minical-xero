@@ -41,8 +41,9 @@
             extension
             works. You can either modify it or
             delete it.</h5>
+        <hr>
         <div class="">
-            <table id="example" class="display" style="width:100%">
+            <table id="customer_list" class="display" style="width:100%">
                 <thead>
                     <tr>
                         <th class="text-center"><?php echo l('minical-extension-boilerplate/S. No.', true);?></th>

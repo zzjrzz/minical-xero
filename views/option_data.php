@@ -37,58 +37,61 @@
     <div class="card-body">
         <h5>This is a sample page of CRUD(Create, read, update and delete) for custom data (options-table). It's just
             how
-            you can handle the custom data in miniCal. You can either modify it or delete it.</h5><br />
-        <div><button class="pull-right btn btn-primary" id="add_option_model_button">Add Option</button></div><br />
-        <table id="example" class="display" style="width:100%">
-            <thead>
-                <tr>
-                    <th class=" text-center">Option ID</th>
-                    <th class=" text-center">Option Name</th>
-                    <th class=" text-center">Option Value</th>
-                    <th class=" text-center">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php 
+            you can handle the custom data in miniCal. You can either modify it or delete it.</h5>
+        <hr>
+        <div><button class="pull-right btn btn-primary" id="add_option_model_button">Add Option</button></div>
+        <br><br>
+        <div>
+            <table id="option_list" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th class=" text-center">Option ID</th>
+                        <th class=" text-center">Option Name</th>
+                        <th class=" text-center">Option Value</th>
+                        <th class=" text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
                         if (isset($options) && $options):
                         foreach ($options as $option) : 
                         if (isset($option['option_id'])):
                     ?>
 
-                <tr class=''>
-                    <td class="text-center"><?php echo $option['option_id']; ?></td>
-                    <td class="text-center">
-                        <?php echo $option['option_name'] ? $option['option_name'] : ' '; ?>
-                    </td>
-                    <td class="text-center" style="width:auto"><?php echo $option['option_value'] ?? '';?></td>
-                    <td class=" text-center">
-                        <button class="btn btn-primary edit_option_button"
-                            id="<?php echo $option['option_name']; ?>">Edit</button>
-                        <button class="btn btn-danger delete_option_button"
-                            id="<?php echo $option['option_name']; ?>">Delete</button>
-                    </td>
-                </tr>
-                <?php 
+                    <tr class=''>
+                        <td class="text-center"><?php echo $option['option_id']; ?></td>
+                        <td class="text-center">
+                            <?php echo $option['option_name'] ? $option['option_name'] : ' '; ?>
+                        </td>
+                        <td class="text-center" style="width:auto"><?php echo $option['option_value'] ?? '';?></td>
+                        <td class=" text-center">
+                            <button class="btn btn-primary edit_option_button"
+                                id="<?php echo $option['option_name']; ?>">Edit</button>
+                            <button class="btn btn-danger delete_option_button"
+                                id="<?php echo $option['option_name']; ?>">Delete</button>
+                        </td>
+                    </tr>
+                    <?php 
                 endif;
                 endforeach;
                 else:
                  ?>
-                <tr class='' data-booking-id=''>
-                    <td></td>
-                    <td></td>
-                    <td class="text-center">
-                        <h3><?php echo l('minical-extension-boilerplate/No data', true);?></h3>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <?php 
+                    <tr class='' data-booking-id=''>
+                        <td></td>
+                        <td></td>
+                        <td class="text-center">
+                            <h3><?php echo l('minical-extension-boilerplate/No data', true);?></h3>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <?php 
                     endif;
                 ?>
-                </tr>
-            </tbody>
-        </table>
-
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

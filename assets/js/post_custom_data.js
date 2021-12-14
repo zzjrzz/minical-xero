@@ -1,8 +1,11 @@
 $(document).ready(function () {
-
+    $('#post_list').DataTable();
     $('#add_post_model_button').on('click', function () {
+        $('#add_post_model form')[0].reset();
         $('#update_data').css("display", "none");
         $('#add_post_model').modal('show');
+        $(".post-meta").css("display", "");
+
     });
 });
 
