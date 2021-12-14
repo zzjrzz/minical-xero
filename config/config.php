@@ -5,8 +5,8 @@ $config = array(
         "is_default_active" => 1,
         "version" => "1.0.0", // version of extension
         "image_name" => "", // extension's log image
-        "view_link" => "bookings_list", // view icon link
-        "setting_link" => "bookings_list", // setting icon link
+        "view_link" => "sample_page", // view icon link
+        "setting_link" => "sample_page", // setting icon link
         "categories" => array("payment_process"), // category of extension
         "marketplace_product_link" => ""
     

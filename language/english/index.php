@@ -1,7 +1,7 @@
 <?php
 
 $lang['minical-extension-boilerplate']['Bolierplate Extenstion'] = 'Bolierplate Extenstion';
-$lang['minical-extension-boilerplate']['Sample Template Page'] = 'Sample Template Page';
+$lang['minical-extension-boilerplate']['Blank Page'] = 'Blank Page';
 $lang['minical-extension-boilerplate']['booking list'] = 'Booking List';
 $lang['minical-extension-boilerplate']['booking_id'] = 'Booking ID';
 $lang['minical-extension-boilerplate']['room_number'] = 'Room Number';
@@ -46,7 +46,7 @@ $lang['minical-extension-boilerplate']['S. No.'] = 'S. No.';
 $lang['minical-extension-boilerplate']['Update Post'] = 'Update Post';
 $lang['minical-extension-boilerplate']['Add Post'] = 'Add Post';
 $lang['minical-extension-boilerplate']['Update option'] = 'Update option';
-$lang['minical-extension-boilerplate']['Info Page'] = 'Info Page';
+$lang['minical-extension-boilerplate']['Document'] = 'Document';
 $lang['minical-extension-boilerplate']['custom Field 1'] = 'Custom field One';
 $lang['minical-extension-boilerplate']['custom Field 2'] = 'Custom field Two';
 $lang['minical-extension-boilerplate']['custom Field 3'] = 'Custom field Three';

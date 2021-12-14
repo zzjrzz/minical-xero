@@ -13,7 +13,7 @@
 <div class="topnav nav-color mb-3">
     <ul>
         <li><a class="<?php if($this->uri->segment(1) == 'sample_page') echo 'active'; ?>"
-                href="<?php echo base_url().'sample_page'?>"><?php echo l('minical-extension-boilerplate/Sample Template Page', true); ?></a>
+                href="<?php echo base_url().'sample_page'?>"><?php echo l('minical-extension-boilerplate/Blank Page', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'bookings_list') echo 'active'; ?>"
                 href="<?php echo base_url().'bookings_list'?>"><?php echo l('minical-extension-boilerplate/Booking list', true); ?></a>
@@ -28,11 +28,10 @@
                 href="<?php echo base_url().'option_data'?>"><?php echo l('minical-extension-boilerplate/Options Custom data', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'info_page') echo 'active'; ?>"
-                href="<?php echo base_url().'info_page'?>"><?php echo l('minical-extension-boilerplate/Info Page', true); ?></a>
+                href="<?php echo base_url().'info_page'?>"><?php echo l('minical-extension-boilerplate/Document', true); ?></a>
         </li>
     </ul>
 </div>
-
 <div class="main-card card">
     <div class="card-body">
         <!-- Required for opening booking dialog while viewing [Show all...] pages -->
