@@ -56,7 +56,16 @@ $config['css-files'] = array(
     ),
 );
 
+$config['xero_client_id'] = 'YOUR_XERO_CLIENT_ID';
+$config['xero_client_secret'] = 'YOUR_XERO_CLIENT_SECRET';
+$config['xero_redirect_uri'] = 'YOUR_REDIRECT_URI';
+$config['xero_tenant_id'] = 'YOUR_XERO_TENANT_ID';
+
+// Add this line to autoload the Xero library
+$config['autoload_libraries'] = array('Xero_lib');
+
 //load helpers file 
 $extension_helper = array(
     'booking_list_helper'
   );
+  
