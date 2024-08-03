@@ -4,7 +4,7 @@
             <div class="page-title-icon">
                 <i class="pe-7s-diskette text-success"></i>
             </div>
-            <div><?php echo l('minical-extension-boilerplate/Bolierplate Extenstion'); ?>
+            <div><?php echo l('xero-booking/Bolierplate Extenstion'); ?>
 
             </div>
         </div>
@@ -13,22 +13,22 @@
 <div class="topnav nav-color mb-3">
     <ul>
         <li><a class="<?php if($this->uri->segment(1) == 'sample_page') echo 'active'; ?>"
-                href="<?php echo base_url().'sample_page'?>"><?php echo l('minical-extension-boilerplate/Blank Page', true); ?></a>
+                href="<?php echo base_url().'sample_page'?>"><?php echo l('xero-booking/Blank Page', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'bookings_list') echo 'active'; ?>"
-                href="<?php echo base_url().'bookings_list'?>"><?php echo l('minical-extension-boilerplate/Booking list', true); ?></a>
+                href="<?php echo base_url().'bookings_list'?>"><?php echo l('xero-booking/Booking list', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'customer_list') echo 'active'; ?>"
-                href="<?php echo base_url().'customer_list'?>"><?php echo l('minical-extension-boilerplate/Customer List', true); ?></a>
+                href="<?php echo base_url().'customer_list'?>"><?php echo l('xero-booking/Customer List', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'post_data') echo 'active'; ?>"
-                href="<?php echo base_url().'post_data'?>"><?php echo l('minical-extension-boilerplate/Post Custom data', true); ?></a>
+                href="<?php echo base_url().'post_data'?>"><?php echo l('xero-booking/Post Custom data', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'option_data') echo 'active'; ?>"
-                href="<?php echo base_url().'option_data'?>"><?php echo l('minical-extension-boilerplate/Options Custom data', true); ?></a>
+                href="<?php echo base_url().'option_data'?>"><?php echo l('xero-booking/Options Custom data', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'info_page') echo 'active'; ?>"
-                href="<?php echo base_url().'info_page'?>"><?php echo l('minical-extension-boilerplate/Document', true); ?></a>
+                href="<?php echo base_url().'info_page'?>"><?php echo l('xero-booking/Document', true); ?></a>
         </li>
     </ul>
 </div>
@@ -82,7 +82,7 @@
                     <td></td>
                     <td></td>
                     <td class="text-center">
-                        <h3><?php echo l('minical-extension-boilerplate/no data', true);?></h3>
+                        <h3><?php echo l('xero-booking/no data', true);?></h3>
                     </td>
                     <td></td>
                     <td></td>
@@ -111,21 +111,21 @@
                     <input type="hidden" id="post_id">
                     <div class="form-group row">
                         <label for="title"
-                            class="col-sm-2 col-form-label"><?php echo l('minical-extension-boilerplate/Post Title');?>*</label>
+                            class="col-sm-2 col-form-label"><?php echo l('xero-booking/Post Title');?>*</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="title" placeholder="Enter Post title">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="type"
-                            class="col-sm-2 col-form-label"><?php echo l('minical-extension-boilerplate/Post Type');?>*</label>
+                            class="col-sm-2 col-form-label"><?php echo l('xero-booking/Post Type');?>*</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="type" placeholder="Enter Post Type">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="content"
-                            class="col-sm-2 col-form-label"><?php echo l('minical-extension-boilerplate/Post Content');?></label>
+                            class="col-sm-2 col-form-label"><?php echo l('xero-booking/Post Content');?></label>
                         <div class="col-sm-10">
                             <textarea class="form-control" id="content" rows="3"
                                 placeholder="Enter Post Content"></textarea>
@@ -133,7 +133,7 @@
                     </div>
                     <div class="form-group row">
                         <label for="mime-type"
-                            class="col-sm-2 col-form-label"><?php echo l('minical-extension-boilerplate/Post Mime Type');?></label>
+                            class="col-sm-2 col-form-label"><?php echo l('xero-booking/Post Mime Type');?></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="mime-type" placeholder="Enter Post Mime Type">
                         </div>
@@ -145,21 +145,21 @@
 
                         <div class="form-group row">
                             <label for=""
-                                class="col-sm-2 col-form-label"><?php echo l('minical-extension-boilerplate/custom field 1');?></label>
+                                class="col-sm-2 col-form-label"><?php echo l('xero-booking/custom field 1');?></label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="field_1" placeholder="">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for=""
-                                class="col-sm-2 col-form-label"><?php echo l('minical-extension-boilerplate/custom field 2');?></label>
+                                class="col-sm-2 col-form-label"><?php echo l('xero-booking/custom field 2');?></label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="field_2" placeholder="">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for=""
-                                class="col-sm-2 col-form-label"><?php echo l('minical-extension-boilerplate/custom field 3');?></label>
+                                class="col-sm-2 col-form-label"><?php echo l('xero-booking/custom field 3');?></label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="field_3" placeholder="">
                             </div>
@@ -169,10 +169,10 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary"
-                    id="post_data"><?php echo l('minical-extension-boilerplate/Add Post');?></button>
+                    id="post_data"><?php echo l('xero-booking/Add Post');?></button>
 
                 <button type="button" class="btn btn-primary"
-                    id="update_data"><?php echo l('minical-extension-boilerplate/Update Post');?></button>
+                    id="update_data"><?php echo l('xero-booking/Update Post');?></button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>

@@ -14,10 +14,14 @@ class Xero_lib {
     public function __construct()
     {
         $this->ci =& get_instance();
-        
+        $this->ci->module_name = $this->ci->router->fetch_module();
         // Load configuration
-        $this->ci->load->config('xero_config');
-        
+        // $this->ci->load->config('xero_config');
+        $this->ci->load->config('../extensions/'.$this->ci->module_name.'/config/xero_config');
+        // echo "<pre>";
+        // print_r($this->ci->load->config('../extensions/'.$this->ci->module_name.'/config/xero_config'));
+        // echo "</pre>";
+        // exit;
         // Set up Xero API connection
         $this->setup_xero_connection();
     }

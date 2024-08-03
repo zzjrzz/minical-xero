@@ -7,6 +7,8 @@ class Custom_data extends MY_Controller
     {
         parent::__construct();
         $this->module_name = $this->router->fetch_module();
+        $this->load->model('../extensions/'.$this->module_name.'/models/Bookings_model');
+        $this->load->library('../extensions/'.$this->module_name.'/libraries/GreetingEmail');
   
     }
 
@@ -19,9 +21,12 @@ class Custom_data extends MY_Controller
         $post = array('user_id' => $this->user_id, "company_id" => $this->company_id);
         $files = get_asstes_files($this->module_assets_files, $this->module_name, $this->controller_name, $this->function_name);
         
-        $post_data = get_post($post);
-        if(isset($post_data) && $post_data != null){
-            $data['posts'] = $post_data;
+        // $post_data = get_post($post);
+        // if(isset($post_data) && $post_data != null){
+        //     $data['posts'] = $post_data;
+        // }
+        if(isset($post) && $post != null){
+            $data['posts'] = $post;
         }
         $data['main_content'] = '../extensions/'.$this->module_name.'/views/post_custom_data';
         $this->template->load('bootstrapped_template', null, $data['main_content'], $data); 
@@ -55,11 +60,14 @@ class Custom_data extends MY_Controller
                  */
                 'meta' =>  $meta ?? ''
             );
-
+            echo "<pre>";
+            print_r($custom_data);
+            echo "</pre>";
+            exit;
             /**
              * This method add post data
              */
-            add_post($custom_data);
+            // add_post($custom_data);
             
             echo json_encode(array('success'=> true));
         }else{

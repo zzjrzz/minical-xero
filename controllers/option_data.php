@@ -19,9 +19,12 @@ class Option_data extends MY_Controller
         $data['menu_on'] = TRUE;
         $option = array("company_id" => $this->company_id);
         $files = get_asstes_files($this->module_assets_files, $this->module_name, $this->controller_name, $this->function_name);
-        $option_data = get_options();
-        if(isset($option_data) && $option_data != null){
-            $data['options'] = $option_data;
+        // $option_data = get_options();
+        // if(isset($option_data) && $option_data != null){
+        //     $data['options'] = $option_data;
+        // }
+        if(isset($option) && $option != null){
+            $data['options'] = $option;
         }
         
         $data['main_content'] = '../extensions/'.$this->module_name.'/views/option_data';
@@ -43,8 +46,8 @@ class Option_data extends MY_Controller
             * it takes 3 arg in parameter
             * 
             */
-            $data = add_option($_POST['option_name'], $_POST['option_value'],  $autoload);
-
+            // $data = add_option($_POST['option_name'], $_POST['option_value'],  $autoload);
+            $data = array($_POST['option_name'], $_POST['option_value'],  $autoload);
             if(isset($data) && $data != null){
                 echo json_encode(array('success'=> true));
             }else{

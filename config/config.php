@@ -1,6 +1,6 @@
 <?php 
 $config = array(
-        "name" => "Minical Extension Boilerplate",
+        "name" => "XERO MINICAL EXTENSION",
         "description" => "It is a sample boilerplate extension it contains the basic structure of a typical extension. It will show you the list of bookings.",
         "is_default_active" => 1,
         "version" => "1.0.0", // version of extension
@@ -11,3 +11,5 @@ $config = array(
         "marketplace_product_link" => ""
     
     );
+
+    $config['enable_hooks'] = TRUE;

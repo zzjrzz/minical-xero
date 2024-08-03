@@ -7,7 +7,7 @@ class GreetingEmail {
         $this->ci =& get_instance();
 
         $this->ci->load->library('Email');
-        $this->module_name = 'minical-extension-boilerplate';
+        $this->module_name = 'xero-booking';
 
     }   
 

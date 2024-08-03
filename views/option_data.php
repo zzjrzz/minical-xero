@@ -4,7 +4,7 @@
             <div class="page-title-icon">
                 <i class="pe-7s-diskette text-success"></i>
             </div>
-            <div><?php echo l('minical-extension-boilerplate/Bolierplate Extenstion'); ?>
+            <div><?php echo l('xero-booking/Bolierplate Extenstion'); ?>
 
             </div>
         </div>
@@ -13,22 +13,22 @@
 <div class="topnav nav-color mb-3">
     <ul>
         <li><a class="<?php if($this->uri->segment(1) == 'sample_page') echo 'active'; ?>"
-                href="<?php echo base_url().'sample_page'?>"><?php echo l('minical-extension-boilerplate/Blank Page', true); ?></a>
+                href="<?php echo base_url().'sample_page'?>"><?php echo l('xero-booking/Blank Page', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'bookings_list') echo 'active'; ?>"
-                href="<?php echo base_url().'bookings_list'?>"><?php echo l('minical-extension-boilerplate/Booking list', true); ?></a>
+                href="<?php echo base_url().'bookings_list'?>"><?php echo l('xero-booking/Booking list', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'customer_list') echo 'active'; ?>"
-                href="<?php echo base_url().'customer_list'?>"><?php echo l('minical-extension-boilerplate/Customer List', true); ?></a>
+                href="<?php echo base_url().'customer_list'?>"><?php echo l('xero-booking/Customer List', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'post_data') echo 'active'; ?>"
-                href="<?php echo base_url().'post_data'?>"><?php echo l('minical-extension-boilerplate/Post Custom data', true); ?></a>
+                href="<?php echo base_url().'post_data'?>"><?php echo l('xero-booking/Post Custom data', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'option_data') echo 'active'; ?>"
-                href="<?php echo base_url().'option_data'?>"><?php echo l('minical-extension-boilerplate/Options Custom data', true); ?></a>
+                href="<?php echo base_url().'option_data'?>"><?php echo l('xero-booking/Options Custom data', true); ?></a>
         </li>
         <li><a class="<?php if($this->uri->segment(1) == 'info_page') echo 'active'; ?>"
-                href="<?php echo base_url().'info_page'?>"><?php echo l('minical-extension-boilerplate/Document', true); ?></a>
+                href="<?php echo base_url().'info_page'?>"><?php echo l('xero-booking/Document', true); ?></a>
         </li>
     </ul>
 </div>
@@ -80,7 +80,7 @@
                         <td></td>
                         <td></td>
                         <td class="text-center">
-                            <h3><?php echo l('minical-extension-boilerplate/No data', true);?></h3>
+                            <h3><?php echo l('xero-booking/No data', true);?></h3>
                         </td>
                         <td></td>
                         <td></td>
@@ -109,7 +109,7 @@
                 <form>
                     <div class="form-group row">
                         <label for="option_name"
-                            class="col-sm-2 col-form-label"><?php echo l('minical-extension-boilerplate/Option Name');?><span
+                            class="col-sm-2 col-form-label"><?php echo l('xero-booking/Option Name');?><span
                                 class="required">*</span></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="option_name" placeholder="Enter Option Name">
@@ -117,14 +117,14 @@
                     </div>
                     <div class="form-group row">
                         <label for="option_value"
-                            class="col-sm-2 col-form-label"><?php echo l('minical-extension-boilerplate/Option Value');?></label>
+                            class="col-sm-2 col-form-label"><?php echo l('xero-booking/Option Value');?></label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="option_value" placeholder="Enter Option Value">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label form-check-label" for="autoload">
-                            <?php echo l('minical-extension-boilerplate/Autoload');?>
+                            <?php echo l('xero-booking/Autoload');?>
                         </label>
                         <div class="col-sm-10">
                             <input class="form-check-input autoload" type="checkbox" value="" id="autoload">
@@ -135,10 +135,10 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary"
-                    id="add_option"><?php echo l('minical-extension-boilerplate/Add Option');?></button>
+                    id="add_option"><?php echo l('xero-booking/Add Option');?></button>
 
                 <button type="button" class="btn btn-primary"
-                    id="update_option"><?php echo l('minical-extension-boilerplate/Update Option');?></button>
+                    id="update_option"><?php echo l('xero-booking/Update Option');?></button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
